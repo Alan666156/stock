@@ -1,0 +1,63 @@
+server:
+  port: 8888
+#  tomcat:
+#    basedir: .
+#    accesslog:
+#      enabled: true
+#      pattern: "%t %a \"%r\" %s (%D ms)"
+spring:
+  application:
+    name: stock
+  datasource:
+    url: jdbc:log4jdbc:mysql://localhost:3306/stock?characterEncoding=utf8&allowMultiQueries=true&useSSL=false&serverTimezone=Asia/Shanghai
+    username: root
+    password: root123
+    driver-class-name: net.sf.log4jdbc.DriverSpy
+    tomcat:
+      test-on-borrow: true
+      max-active: 50
+      validation-query: select 1 from dual
+      max-idle: 5
+      min-idle: 2
+      test-while-idle: true
+      initial-size: 2
+      test-on-return: true
+  jpa:
+    database: mysql
+    show-sql: true
+    hibernate:
+      ddl-auto: update
+#  redis:
+#    host: 192.168.1.128
+#    port: 6381
+#    password: gtowntestredis@123
+#    database: 12
+
+  servlet:
+    multipart:
+      max-file-size: -1
+      max-request-size: -1
+      location: c:/data/tmptomcatdir
+logging:
+  config: classpath:log4j2.xml
+#同花顺
+stock:
+    url: http://q.10jqka.com.cn/gn/
+
+
+management:
+  endpoints:
+    cors:
+      allowed-origins: "*"
+      allowed-methods: GET,POST
+#eureka:
+#  instance:
+#    instanceId: ${spring.application.name}:${random.int}
+#    prefer-ip-address: true
+#  client:
+#    serviceUrl:
+#      defaultZone: http://localhost:3333/eureka/
+#hystrix.command.default.execution.isolation.thread.timeoutInMilliseconds: 300000
+#spring.cloud.loadbalancer.retry.enabled: true
+#ribbonReadTimeout: 60000
+#ribbon.ConnectTimeout: 60000
