@@ -11,7 +11,7 @@ import javax.persistence.Table;
 import java.math.BigDecimal;
 
 /**
- * 文件配置对象
+ *
  */
 @Data
 @Entity

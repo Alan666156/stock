@@ -5,10 +5,10 @@ import java.io.Serializable;
 import java.math.BigDecimal;
 
 /**
- *
+ * 竞价指标计算
  */
 @Data
-public class StockDTO implements Serializable {
+public class BiddingDTO implements Serializable {
 	
 	/**
 	 * 
@@ -22,15 +22,18 @@ public class StockDTO implements Serializable {
 	 * 编码
 	 */
 	private String code;
-
 	/**
-	 * 开盘价
+	 * 交易额
 	 */
-	private BigDecimal openingPrice;
+	private BigDecimal tradeAmount;
 	/**
-	 * 收盘价
+	 * 昨日最大成交量
 	 */
-	private BigDecimal closingPrice;
+	private BigDecimal yesterdayMax;
+	/**
+	 * 计算今日成交量多少符合参与
+	 */
+	private BigDecimal tradeNum;
 	/**
 	 * 涨跌幅
 	 */

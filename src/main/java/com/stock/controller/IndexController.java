@@ -64,10 +64,18 @@ public class IndexController {
 
 	/**
 	 * 量化分析
-	 * @param mobile
 	 */
 	@GetMapping("/quantitativeMethods")
 	public Result QuantitativeMethods(){
+
+		return Result.create(true);
+	}
+
+	/**
+	 * bidding分析
+	 */
+	@GetMapping("/bidding")
+	public Result bidding(String code){
 
 		return Result.create(true);
 	}

@@ -44,7 +44,6 @@ logging:
 stock:
     url: http://q.10jqka.com.cn/gn/
 
-
 management:
   endpoints:
     cors:
