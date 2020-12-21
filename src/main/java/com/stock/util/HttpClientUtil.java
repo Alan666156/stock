@@ -30,7 +30,7 @@ import java.util.*;
 /**
  * http 工具类
  *
- * @author fuhongxing
+ * @author Alan.Fu
  */
 @Slf4j
 public class HttpClientUtil {

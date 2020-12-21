@@ -10,7 +10,7 @@ import java.util.Locale;
 
 /**
  * 手机归属地/运营商/号码验证 查询工具类
- * @author fuhongxing
+ * @author Alan.Fu
  */
 public class PhoneUtil {
 

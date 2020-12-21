@@ -10,7 +10,7 @@ import java.util.Date;
 
 /**
  * 日期时间工具
- * Created by Alan Fu on 2018/1/6.
+ * @author Alan.Fu
  */
 @Slf4j
 public class DateUtils {

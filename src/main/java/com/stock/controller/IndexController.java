@@ -13,7 +13,7 @@ import java.util.List;
 
 /**
  *
- * @author fhx
+ * @author Alan.Fu
  * @date 2020年12月17日
  */
 @Slf4j
@@ -67,7 +67,7 @@ public class IndexController {
 	 */
 	@GetMapping("/quantitativeMethods")
 	public Result QuantitativeMethods(){
-
+		log.info("量化分析");
 		return Result.create(true);
 	}
 
@@ -76,7 +76,7 @@ public class IndexController {
 	 */
 	@GetMapping("/bidding")
 	public Result bidding(String code){
-
+		log.info("竞价分析:{}", code);
 		return Result.create(true);
 	}
 

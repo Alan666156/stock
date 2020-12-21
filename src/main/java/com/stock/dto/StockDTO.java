@@ -5,7 +5,7 @@ import java.io.Serializable;
 import java.math.BigDecimal;
 
 /**
- *
+ * @author Alan.Fu
  */
 @Data
 public class StockDTO implements Serializable {

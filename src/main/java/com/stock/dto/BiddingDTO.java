@@ -6,6 +6,7 @@ import java.math.BigDecimal;
 
 /**
  * 竞价指标计算
+ * @author Alan.Fu
  */
 @Data
 public class BiddingDTO implements Serializable {

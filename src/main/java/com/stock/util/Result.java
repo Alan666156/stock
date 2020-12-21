@@ -7,7 +7,7 @@ import java.io.Serializable;
 
 /**
  * 接口返回定义
- * Created by Alan Fu on 2018/1/6.
+ * @author Alan.Fu
  */
 @Data
 @ToString

@@ -10,7 +10,7 @@ import lombok.extern.slf4j.Slf4j;
 /**
  * 全局异常捕获
  * @author fhx
- * @date 2018年12月13日
+ * @date 2020年12月13日
  */
 @Slf4j
 @ControllerAdvice
