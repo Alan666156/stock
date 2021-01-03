@@ -4,49 +4,63 @@ import lombok.Data;
 import org.springframework.data.jpa.domain.AbstractPersistable;
 import org.springframework.data.jpa.domain.support.AuditingEntityListener;
 
-import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.EntityListeners;
 import javax.persistence.Table;
 import java.math.BigDecimal;
 
 /**
- *
+ * 市场情绪
  */
 @Data
 @Entity
-@Table(name = "stock")
+@Table(name = "market_sentiment")
 @EntityListeners(AuditingEntityListener.class)
-public class Stock extends AbstractPersistable<Long>{
+public class MarketSentiment extends AbstractPersistable<Long>{
 	
 	/**
-	 *
+	 * market sentiment 
 	 */
 	private static final long serialVersionUID = 1L;
 	/**
-	 * 名称
+	 * 上涨数量
 	 */
-	@Column(name="name", columnDefinition=("varchar(50)  default null comment '名称'"))
-	private String name;
+	private Integer up;
 	/**
-	 * 编码
+	 * 下跌数量
 	 */
-	@Column(name="code", columnDefinition=("varchar(50)  default null comment '编码'"))
-	private String code;
+	private Integer down;
 	/**
-	 * 开盘价
+	 * 涨停数量
 	 */
-	private BigDecimal openingPrice;
+	private Integer limitUp;
 	/**
-	 * 收盘价
+	 * 跌停数量
 	 */
-	private BigDecimal closingPrice;
+	private Integer limitDown;
+	/**
+	 * 开盘
+	 */
+	private BigDecimal opening;
+	/**
+	 * 收盘
+	 */
+	private BigDecimal closing;
 	/**
 	 * 涨跌幅
 	 */
 	private BigDecimal rate;
 	/**
+	 * 类型(周、月、季、年)
+	 */
+	private String type;
+	/**
+	 * 情绪
+	 */
+	private String sentiment;
+	/**
 	 * 备注
 	 */
 	private String remark;
+
 }
