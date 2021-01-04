@@ -32,6 +32,10 @@ public class StockDTO implements Serializable {
 	 */
 	private BigDecimal closingPrice;
 	/**
+	 * 成交额
+	 */
+	private BigDecimal trade;
+	/**
 	 * 涨跌幅
 	 */
 	private BigDecimal rate;
